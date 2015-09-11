@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MQRecommendUserCellID" rowHeight="197" id="KGk-i7-Jjw" customClass="MQRecommendUserCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="197"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4da-Pf-JD3">
+                        <rect key="frame" x="10" y="73" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="HE7-S7-QhL"/>
+                            <constraint firstAttribute="height" constant="50" id="L08-WR-ZzK"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umr-ap-kxa">
+                        <rect key="frame" x="68" y="73" width="150" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="VBQ-xb-M0f"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfR-z9-e6Q">
+                        <rect key="frame" x="73" y="110.5" width="120" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="2yM-oi-Fmr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="4da-Pf-JD3" secondAttribute="centerY" id="QBN-dC-bj6"/>
+                    <constraint firstItem="umr-ap-kxa" firstAttribute="leading" secondItem="4da-Pf-JD3" secondAttribute="trailing" constant="8" id="RrL-uI-cuz"/>
+                    <constraint firstItem="QfR-z9-e6Q" firstAttribute="leading" secondItem="umr-ap-kxa" secondAttribute="leading" constant="5" id="ZIG-hj-1qE"/>
+                    <constraint firstItem="QfR-z9-e6Q" firstAttribute="bottom" secondItem="4da-Pf-JD3" secondAttribute="bottom" constant="4.5" id="eqW-cg-dwY"/>
+                    <constraint firstItem="umr-ap-kxa" firstAttribute="top" secondItem="4da-Pf-JD3" secondAttribute="top" constant="-0.5" id="fQ4-2P-ita"/>
+                    <constraint firstItem="4da-Pf-JD3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jss-30-2fb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fanCountLabel" destination="QfR-z9-e6Q" id="kW1-EQ-K35"/>
+                <outlet property="headerImageView" destination="4da-Pf-JD3" id="Moo-4r-Ooe"/>
+                <outlet property="nameLabel" destination="umr-ap-kxa" id="ppM-R0-JuB"/>
+            </connections>
+            <point key="canvasLocation" x="333" y="313.5"/>
+        </tableViewCell>
+    </objects>
+</document>

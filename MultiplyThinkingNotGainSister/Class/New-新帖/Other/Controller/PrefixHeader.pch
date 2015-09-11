@@ -1,0 +1,64 @@
+//
+//  PrefixHeader.pch
+//  MultiplyThinkingNotGainSister
+//
+//  Created by tanmanqi on 15/9/2.
+//  Copyright (c) 2015年 baidu. All rights reserved.
+//
+
+#ifndef MultiplyThinkingNotGainSister_PrefixHeader_pch
+#define MultiplyThinkingNotGainSister_PrefixHeader_pch
+//设置左边,右边导航栏的控件
+#import "UIBarButtonItem+MQExtension.h"
+//设置图片_圆角
+#import "UIImage+MQExtension.h"
+//设置圆形图片
+#import "UIImageView+MQExtension.h"
+//一些全世界都要用到的常量
+#import "MQConst.h"
+//快速获取控件的Frame信息
+#import "UIView+MQFrame.h"
+//文件大小计算
+#import "NSString+MQExtension.h"
+
+
+//输出日志
+#ifdef DEBUG
+#define MQLog(...) NSLog(__VA_ARGS__)
+#else
+#define MQLog(...)
+#endif
+
+//打印方法名和在多少行
+#define MQLogLine MQLog(@"\n1->[类和方法函数:%s]\n  2->[第 %d 行]\n\n",__func__,__LINE__)
+//能够打印方法和行的打印输出日志
+#define MQLogLineFun(...) MQLog(@"\n1->[类和方法函数:%s]\n  2->[第 %d 行]\n   3->[%@]\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+
+//设置统一颜色
+#define MQARGBColor(a, r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define MQRGBColor(r, g, b) MQARGBColor(255, r, g, b)
+#define MQGrayColor(v) MQRGBColor((v), (v), (v))
+#define MQCommonBackgroundColor MQGrayColor(215)
+#define MQRandomColor MQARGBColor(255, arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
+
+
+//block 中的weak变量
+#define MQWeakSelf __weak typeof(self) weakSelf = self;
+
+//将数据写到桌面的plist文件中
+#define MQWriteToPlist(data, filename) [data writeToFile:[NSString stringWithFormat:@"/Users/tanmanqi/Desktop/%@.plist", filename] atomically:YES];
+//颜色测试
+#define XCODE_COLORS_ESCAPE @"\033["
+
+#define XCODE_COLORS_RESET_FG  XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
+#define XCODE_COLORS_RESET_BG  XCODE_COLORS_ESCAPE @"bg;" // Clear any background color
+#define XCODE_COLORS_RESET     XCODE_COLORS_ESCAPE @";"   // Clear any foreground or background color
+#define MQLogColor(frmt, ...) MQLogLineFun((XCODE_COLORS_ESCAPE @"fg128,254,0;" frmt XCODE_COLORS_RESET_FG), ##__VA_ARGS__)
+
+
+//屏幕的宽度和高度
+#define MQMainScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#define MQMainScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#endif

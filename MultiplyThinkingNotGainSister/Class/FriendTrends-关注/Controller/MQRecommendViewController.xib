@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MQRecommendViewController">
+            <connections>
+                <outlet property="RecommendCategoryTabview" destination="Lrj-ed-FD2" id="0ce-uL-bQI"/>
+                <outlet property="rightUserTabview" destination="wnJ-AJ-EMu" id="GIP-B4-c8B"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Lrj-ed-FD2" userLabel="左边">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="ui3-5c-eoJ"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="0aG-Pk-eRk"/>
+                        <outlet property="delegate" destination="-1" id="Twn-LP-BB8"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wnJ-AJ-EMu" userLabel="右边">
+                    <rect key="frame" x="80" y="0.0" width="520" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="XRU-tc-vZW"/>
+                        <outlet property="delegate" destination="-1" id="Hr6-b0-pwf"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Lrj-ed-FD2" secondAttribute="bottom" id="1os-jf-Jsh"/>
+                <constraint firstItem="Lrj-ed-FD2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3rX-mA-IL1"/>
+                <constraint firstItem="Lrj-ed-FD2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8WT-Ug-ZMS"/>
+                <constraint firstAttribute="bottom" secondItem="wnJ-AJ-EMu" secondAttribute="bottom" id="Ais-Jz-EC4"/>
+                <constraint firstItem="wnJ-AJ-EMu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IQZ-u7-S35"/>
+                <constraint firstAttribute="trailing" secondItem="wnJ-AJ-EMu" secondAttribute="trailing" id="Onf-w7-3kB"/>
+                <constraint firstItem="wnJ-AJ-EMu" firstAttribute="leading" secondItem="Lrj-ed-FD2" secondAttribute="trailing" id="dR3-Qf-Dvt"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
